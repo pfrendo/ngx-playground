@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
-import { LocationStrategy, PathLocationStrategy } from "@angular/common";
+import { BrowserModule } from "@angular/platform-browser";
+import { LocationStrategy, PathLocationStrategy, CommonModule } from "@angular/common";
 
 import { HomePage, HeroListPage, HeroDetailPage, HeroService } from "./pages/index";
 import { AppComponent } from "./app.component";
@@ -12,8 +13,15 @@ import { AppComponent } from "./app.component";
 		HeroDetailPage,
 	],
 	imports: [
+		CommonModule,
+		BrowserModule
+	],
+	exports: [
+		CommonModule,
+		BrowserModule
 	],
 	bootstrap: [
+		AppComponent
 	],
 	entryComponents: [
 		HomePage,

@@ -14,7 +14,6 @@
 	// map tells the System loader where to look for things
 	var map = {
 		"app": "app",
-		"test": "test",
 		"rxjs": "n:rxjs",
 		"@angular": "n:@angular",
 		"@ssv": "n:@ssv",
@@ -24,7 +23,6 @@
 	// packages tells the System loader how to load when no filename and/or no extension
 	var packages = {
 		"app": { defaultExtension: "js" },
-		"test": { defaultExtension: "js" },
 
 		// angular
 		"@angular/core": { main: "bundles/core.umd.min.js" },

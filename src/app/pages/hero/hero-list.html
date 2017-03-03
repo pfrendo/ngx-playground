@@ -1,10 +1,10 @@
 <div padding class="heroes">
-	<li ion-item *ngFor="let hero of heroes$ | async">
-		<a navPush="hero-detail" [navParams]="{ hero: hero.key }">
+	<li *ngFor="let hero of heroes$ | async">
+		<a>
 			{{hero.name}}
 		</a>
 	</li>
 	<div>
-		<a navPush="home">Back to Home</a>
+		<a>Back to Home</a>
 	</div>
 </div>

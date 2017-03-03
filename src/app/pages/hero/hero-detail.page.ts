@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef } from "@angular/core";
-import { NavParams } from "ionic-angular";
 import { Subscription } from "rxjs/subscription";
 
 import { Hero } from "./hero.model";
 import { HeroService } from "./hero.service";
 
 @Component({
+	moduleId: module.id,
 	templateUrl: "hero-detail.html"
 })
 export class HeroDetailPage implements OnInit, OnDestroy {
@@ -15,7 +15,6 @@ export class HeroDetailPage implements OnInit, OnDestroy {
 	private hero$$: Subscription;
 
 	constructor(
-		private navParams: NavParams,
 		private service: HeroService,
 		private changeDetector: ChangeDetectorRef
 	) {
@@ -23,8 +22,6 @@ export class HeroDetailPage implements OnInit, OnDestroy {
 	}
 
 	ngOnInit() {
-		this.id = this.navParams.get("hero");
-
 		this.hero$$ = this.service.get(this.id)
 			.do(x => this.hero = x)
 			.do(() => this.changeDetector.markForCheck())
