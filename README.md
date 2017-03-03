@@ -1,5 +1,5 @@
 # ngx-playground
-ngx experimental and playground
+Angular 2+ and ng2-bootstrap experimental and playground
 
 # Getting started
 
