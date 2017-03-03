@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var util = require("gulp-util");
 var browserSync = require("browser-sync");
+var historyApiFallback = require('connect-history-api-fallback');
 
 var paths = require("../paths");
 
